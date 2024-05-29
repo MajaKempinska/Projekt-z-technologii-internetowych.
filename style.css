@@ -163,3 +163,95 @@ h1 {
   transition: 0.5s;
   font-family: font-family: "Mukta", sans-serif;
 }
+
+.homebody{
+  background-color: #482451;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Pacifico", cursive;
+  background: linear-gradient(to right, #482451, #d6a7dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand:hover {
+  background: linear-gradient(to right, #d6a7dc, #482451);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand img {
+  width: 85px;
+  height: 85px;
+}
+
+.navbar {
+  height: 90px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  margin-bottom: -10px !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 40px;
+}
+
+.nav-link {
+  margin-top: -25px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  background-image: linear-gradient(to right, #d6a7dc, #482451);
+}
+
+.search {
+  margin-top: -17px;
+  height: 40px;
+  width: 80%;
+  border-radius: 60px;
+  margin-right: -35px;
+  outline: none;
+  border: 2px solid #482451;
+  padding-left: 15px;
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+}
+
+.btn0 {
+  margin-top: -17px;
+  height: 40px;
+  width: 50%;
+}
