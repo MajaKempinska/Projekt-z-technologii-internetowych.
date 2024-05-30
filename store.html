@@ -39,6 +39,21 @@
             height: 50px;
         }
 
+        /* Style dla nagłówka "Raccoons Trending" */
+        .product h1 {
+            font-family: 'Righteous', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fef6ff;
+            transition: font-size 0.3s ease; /* Dodaj przejście dla płynnej animacji */
+        }
+
+        .product h1:hover {
+            font-size: 2.7rem; /* Ustal wielkość tekstu po najechaniu */
+            background: linear-gradient(to right, #c9c9e6, #6c4177); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 
@@ -65,9 +80,17 @@
                         <a class="nav-link" href="order.html">Order</a>
                     </li>
                 </ul>
+                <form class="d-flex" role="search">
+                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn0" type="submit">
+                      <span>S</span><span>E</span><span>A</span><span>R</span><span>C</span><span>H</span>
+                    </button>
             </div>
         </div>
     </nav>
+
+    <!--======== TU SEKCJA WYBORU SZOPÓW Z OB
+
 
     <!--======== TU SEKCJA WYBORU SZOPÓW Z OBRAZKAMI ========-->
 
@@ -76,7 +99,7 @@
             <div class="row py-4">
                 <div class="col-lg-5 m-auto text-center">
                     <h1>Racoon's Trending</h1>
-                    <h6 style="color: red;">Choose your wea(racoo)pon</h6>
+                    <h6>Choose your wea(racoo)pon</h6>
                 </div>
             </div>
             <div class="row">
@@ -86,8 +109,8 @@
                             <img src="./img/szop18.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>Gossip Racoon: there is more gossip than working.</h6>
-                    <p>$22.99</p>
+                    <p class="centered-text"><strong>Gossip Racoon:</strong><br> There is more gossip than working.</p>
+                    <p class="centered-price">$22.99</p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-2">
@@ -95,8 +118,8 @@
                             <img src="./img/szop17.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>Zorro Racoon: he will distribute your cleaning supplies to the most needy people.</h6>
-                    <p>$0.99</p>
+                    <p class="centered-text"><strong>Zorro Racoon:</strong><br> He will distribute your cleaning supplies to the most needy people.</p>
+                    <p class="centered-price">$0.99</p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-2">
@@ -104,8 +127,8 @@
                             <img src="./img/szop16.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>Rockstar Racoon: more playing guitar than washing.</h6>
-                    <p>$220.99 (autograph extra)</p>
+                    <p class="centered-text"><strong>Rockstar Racoon:</strong><br> More playing guitar than washing.</p>
+                    <p class="centered-price">$220.99 (Autograph extra)</p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-2">
@@ -113,8 +136,8 @@
                             <img src="./img/szop14.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>Very Good Racoon: your laundry will be perfect washed.</h6>
-                    <p>$999.99</p>
+                    <p class="centered-text"><strong>Very Good Racoon:</strong><br> Your laundry will be perfectly washed.</p>
+                    <p class="centered-price">$999.99</p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-2">
@@ -122,8 +145,9 @@
                             <img src="./img/szop15.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>"I Don't Know What to Do" Racoon: never knows what to do, you have to help him to wash</h6>
-                    <p>$10.00</p>
+                    <p class="centered-text"><strong>"I Don't Know What to Do" Racoon:</strong><br> Never knows what to do, you have to help him to wash</p>
+
+                    <p class="centered-price">$10.00</p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-2">
@@ -131,8 +155,8 @@
                             <img src="./img/szop20.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>Postgraduate Racoon: too busy to focus on your laundry all the time.</h6>
-                    <p>$45.00</p>
+                    <p class="centered-text"><strong>Postgraduate Racoon:</strong><br>Too busy to focus on your laundry all the time.</p>
+                    <p class="centered-price">$45.00</p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-2">
@@ -140,8 +164,9 @@
                             <img src="./img/szop12.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>Thief Racoon: The price you will pay for his service will be a rip-off</h6>
-                    <p>$18.99 (don't be attached to the money)</p>
+                    <p class="centered-text"><strong>Thief Racoon:</strong><br>The price you will pay for his service will be a rip-off</p>
+
+                    <p class="centered-price">$18.99 (Don't be attached to the money!)</p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-2">
@@ -149,8 +174,8 @@
                             <img src="./img/szop10.jpg" class="img-fluid fixed-size" alt="">
                         </div>
                     </div>
-                    <h6>Fat Racoon: slow, almost not washing, probably eat your fridge.</h6>
-                    <p>$2.99</p>
+                    <p class="centered-text"><strong>Fat Racoon:</strong><br> Slow, almost not washing, probably eat your fridge.</p>
+                    <p class="centered-price">$2.99</p>
                 </div>
             </div>
         </div>
