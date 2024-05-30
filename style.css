@@ -110,7 +110,7 @@
 }
 
 .main{
-  background: url(img/âPngtreeâpurple\ smoke\ in\ dark\ background_1167620.png) no-repeat;
+  background: url(img/âPngtreeâpurple\ smoke\ in\ dark\ background_1167620.png) no-repeat;
   background-size: cover;
   height: 100vh;
   background-position: 50% 50%;
@@ -128,7 +128,7 @@
   font-size: 2.8rem; /* Ustal wielkość tekstu po najechaniu */
 }
 
-.btn1{
+.btn1 {
   height: 45px;
   width: 35%;
   border: none;
@@ -137,7 +137,12 @@
   color: white;
   font-weight: 700;
   border-radius: 60px;
+  margin-top:-30px;
+  margin-bottom:5px;
+  display: inline-block; /* Dodaj display: inline-block, aby można było stosować margin-top i margin-bottom */
+  
 }
+
 .btn1:hover {
   background: linear-gradient(to right, #482451, #d6a7dc);
 }
@@ -301,5 +306,24 @@ h5:hover{
 
 .custom-margin-right {
   margin-right: 100px; /* Możesz dostosować wartość marginesu według potrzeb */
+}
+
+.btn2 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #d6a7dc, #482451);
+  color: white;
+  font-weight: 700;
+  border-radius: 60px;
+  margin-top:-30px;
+  margin-bottom:5px;
+  display: inline-block; /* Dodaj display: inline-block, aby można było stosować margin-top i margin-bottom */
+  
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #482451, #d6a7dc);
 }
 
