@@ -1,160 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Navbar</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
-  <!-- Dołączanie linków do czcionek bez powtórzeń -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Luckiest+Guy&family=Mukta:wght@200;300;400;500;600;700;800&family=Pacifico&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sevillana&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Peralta&family=Ranchers&family=Redressed&family=Righteous&family=Sigmar&family=Spicy+Rice&display=swap"
-    rel="stylesheet">
-  <style>
-    .navbar-brand {
-      text-align: center;
-      position: relative;
-      z-index: 2;
-      /* Ustawienie z-index na 2, aby napis był na wierzchu */
-    }
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bootstrap Navbar</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="stylesheet" href="./style.css">
+   <!-- Dołączanie linków do czcionek bez powtórzeń -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+     href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Luckiest+Guy&family=Mukta:wght@200;300;400;500;600;700;800&family=Pacifico&display=swap"
+     rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sevillana&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+   <link
+     href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Peralta&family=Ranchers&family=Redressed&family=Righteous&family=Sigmar&family=Spicy+Rice&display=swap"
+     rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
-    .navbar-brand img {
-      position: absolute;
-      top: -22px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      /* Ustawienie z-index na 1, aby logo było pod napisem */
-      width: 50px;
-      /* Nowe, mniejsze wymiary logo */
-      height: 50px;
-      
-    }
-  </style>
-</head>
+   <style>
+     .navbar-brand {
+       text-align: center;
+       position: relative;
+       z-index: 2;
+       /* Ustawienie z-index na 2, aby napis był na wierzchu */
+     }
 
-<body class="homebody">
+     .navbar-brand img {
+       position: absolute;
+       top: -22px;
+       left: 50%;
+       transform: translateX(-50%);
+       z-index: 1;
+       /* Ustawienie z-index na 1, aby logo było pod napisem */
+       width: 50px;
+       /* Nowe, mniejsze wymiary logo */
+       height: 50px;
+       <form class="d-flex" role="search">
+          <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn0" type="submit">
+            <span>S</span><span>E</span><span>A</span><span>R</span><span>C</span><span>H</span>
+          </button>
+        </form>
+     }
+   </style>
+ </head>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./img/szoplogo.png" alt="Logo" width="15" height="15" class="d-inline-block align-text-top">
-        Raccoon Rascals
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav m-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="store.html">Store</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Order</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+ <body class="homebody">
 
-  <section class="main">
-    <div class="container py-5">
-      <div class="row py-5">
-        <div class="col-lg-7 pt-5 text-center">
-          <h1 class="pt-5">SzopoPracze do wynajęcia!</h1>
-          <button class="btn1 mt-3">Dowiedz się więcej!</button>
-        </div>
-        <div class="col-lg-5 pt-5 text-center">
-          <img src="./img/szopymain.png" class="img-fluid img-fluid-large" alt="Large Raccoon Image">
-        </div>
-      </div>
-    </div>
-  </section>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container-fluid">
+       <a class="navbar-brand" href="#">
+         <img src="./img/szoplogo.png" alt="Logo" width="15" height="15" class="d-inline-block align-text-top">
+         Raccoon Rascals
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarScroll">
+         <ul class="navbar-nav m-auto my-2 my-lg-0">
+           <li class="nav-item">
+             <a class="nav-link" href="index.html">Home</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="store.html">Store</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="order.html">Order</a>
+           </li>
+         </ul>
+         <form class="d-flex" role="search">
+           <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+           <button class="btn0" type="submit">
+             <span>S</span><span>E</span><span>A</span><span>R</span><span>C</span><span>H</span>
+           </button>
+         </form>
+       </div>
+     </div>
+   </nav>
 
-  <section class="new>">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="col-lg-4">
-                <div class="col-lg-4">
-                  <img src="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+   <section class="main">
+     <div class="container py-1">
+       <div class="row py-5">
+         <div class="col-lg-7 pt-5 text-center">
+           <h1 class="pt-5">Rent-A-Raccoon:<br> <span class="smaller-text">Your Go-To Trash Pandas for Hire!</span></h1>
+           <button class="btn1 mt-3"><a href="#about">Learn more!</a></button>
+         </div>
+         <div class="col-lg-5 pt-5 text-center">
+           <img src="./img/szopymain.png" class="img-fluid img-fluid-large" alt="Large Raccoon Image">
+         </div>
+       </div>
+     </div>
+   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-</body>
-</html>
+   <section class="new>">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-7">
+           <div class="row">
+             <div class="col-lg-4">
+               <div class="col-lg-4">
+                 <div class="col-lg-4">
+                   <img src="">
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
 
-<section class="about">
-  <div class="container py-5">
-    <div class="row py-4">
-      <div class="col-lg-8 m-auto text-center">
-        <h1>Prepare for a Trashy Adventure in Raccoonville</h1>
-        <h6 style="color: red;">Rent-A-Raccoon-Team: Your Hilarious, Dumpster-Diving Companions Await!</h6>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="my-2"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="./img/Designer.jpeg" class="img-fluid" mb-3 alt="">
-        <h5>Misbehaving Dumpster Diving Raccoons</h5>
-        <p> Watch out for those mischievous dumpster diving raccoons! They're the neighborhood's nocturnal ninjas,
-          sneaking into dumpsters with the finesse of acrobats and the mischief of pranksters. From scavenging snacks to
-          staging impromptu trash can parties, these raccoons redefine the meaning of 'trash pandas.' So lock up your
-          bins tight, or you might just wake up to a raccoon rave in your backyard!</p>
-      </div>
-      <div class="col-lg-4">
-        <img src="./img/Designer-2.jpeg" class="img-fluid" mb-3 alt="">
-        <h5>Polite Trash Collectors: The Raccoon Edition</h5>
-        <p>Introducing 'Polite Trash Collectors: The Raccoon Edition'—where manners meet mischief! These charming
-          raccoons have mastered the art of trash collection with finesse and courtesy. With a polite paw and a
-          mischievous twinkle in their eyes, they roam the neighborhood, tidying up discarded items with care. Whether
-          it's neatly arranging recyclables or respectfully returning misplaced trash to its bin, these raccoons prove
-          that even the most unconventional tasks can be done with grace. So, if you spot one of these dapper trash
-          collectors in your area, rest assured that your neighborhood is in good paws.</p>
-      </div>
-      <div class="col-lg-4">
-        <img src="./img/Designer-3.jpeg" class="img-fluid" mb-3 alt="">
-        <h5>The Talented Raccoon Troupers</h5>
-        <p>It's all about hitting the right chords rather than the right wash cycle! While others are knee-deep in
-          laundry, you'll find this raccoon rocking on stage, leaving the laundry basket untouched.
-          And our postgraduate scholar? Well, let's just say their research paper is probably neater than their
-          wardrobe! With their head buried in books and ambitions soaring, laundry day is just another thing that gets
-          lost in the academic hustle. Who needs spotless socks when you're busy chasing those academic dreams, right?
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
+ </body>
+ </html>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+ <section id="about" class="about mx-lg-5 px-lg-5"> <!-- Dodano klasę px-lg-5 -->
+   <div class="container py-5">
+     <div class="row py-4">
+       <div class="col-lg-8 m-auto text-center">
+         <h1>Prepare for a Trashy Adventure in Raccoonville</h1>
+         <h6 class="bold-text">Rent-A-Raccoon-Team: Your Hilarious, Dumpster-Diving Companions Await!</h6>
+       </div>
+     </div>
+   </div>
+ </section>
+ <section class="px-lg-5"> <!-- Dodano klasę px-lg-5 -->
+   <div class="row">
+     <div class="col-lg-12 text-center">
+       <div class="my-2"></div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-lg-4">
+       <img src="./img/Designer.jpeg" class="img-fluid" mb-3 alt="">
+       <h5>Misbehaving Dumpster Diving Raccoons Rascals</h5>
+
+       <p class="justified-text"> Watch out for those mischievous dumpster diving raccoons! They're the neighborhood's nocturnal ninjas,
+         sneaking into dumpsters with the finesse of acrobats and the mischief of pranksters. From scavenging snacks to
+         staging impromptu trash can parties, these raccoons redefine the meaning of 'trash pandas.' So lock up your
+         bins tight, or you might just wake up to a raccoon rave in your backyard!</p>
+     </div>
+     <div class="col-lg-4">
+       <img src="./img/Designer-2.jpeg" class="img-fluid" mb-3 alt="">
+       <h5>Polite Trash Collectors: The Raccoon Edition</h5>
+       <p class="justified-text">Introducing 'Polite Trash Collectors: The Raccoon Edition'—where manners meet mischief! These charming
+         raccoons have mastered the art of trash collection with finesse and courtesy. With a polite paw and a
+         mischievous twinkle in their eyes, they roam the neighborhood, tidying up discarded items with care. Whether
+         it's neatly arranging recyclables or respectfully returning misplaced trash to its bin, these raccoons prove
+         that even the most unconventional tasks can be done with grace. So, if you spot one of these dapper trash
+         collectors in your area, rest assured that your neighborhood is in good paws.</p>
+     </div>
+     <div class="col-lg-4">
+       <img src="./img/Designer-3.jpeg" class="img-fluid" mb-3 alt="">
+       <h5>The Incredibly Talented Raccoon Troupers</h5>
+       <p class="justified-text">It's all about hitting the right chords rather than the right wash cycle! While others are knee-deep in
+         laundry, you'll find this raccoon rocking on stage, leaving the laundry basket untouched.
+         And our postgraduate scholar? Well, let's just say their research paper is probably neater than their
+         wardrobe! With their head buried in books and ambitions soaring, laundry day is just another thing that gets
+         lost in the academic hustle. Who needs spotless socks when you're busy chasing those academic dreams, right?
+       </p>
+     </div>
+   </div>
+ </section>
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ </body>
+ </html>
