@@ -129,23 +129,24 @@
 }
 
 .btn1 {
-  height: 45px;
-  width: 35%;
+  height: 60px; /* zwiększ wysokość przycisku */
+  width: 70%; /* zwiększ szerokość przycisku */
+  font-size: 16px; /* zmniejsz rozmiar czcionki */
   border: none;
   outline: none;
   background: linear-gradient(to right, #d6a7dc, #482451);
   color: white;
   font-weight: 700;
   border-radius: 60px;
-  margin-top:-30px;
-  margin-bottom:5px;
-  display: inline-block; /* Dodaj display: inline-block, aby można było stosować margin-top i margin-bottom */
-  
+  margin-top: -30px;
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
 .btn1:hover {
   background: linear-gradient(to right, #482451, #d6a7dc);
 }
+
 
 h1 {
   font-weight: 700;
@@ -317,13 +318,22 @@ h5:hover{
   color: white;
   font-weight: 700;
   border-radius: 60px;
-  margin-top:-30px;
-  margin-bottom:5px;
-  display: inline-block; /* Dodaj display: inline-block, aby można było stosować margin-top i margin-bottom */
-  
+  margin-top: -30px;
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
-.btn:hover {
-  background: linear-gradient(to right, #482451, #d6a7dc);
+.btn2 a {
+  color: white; /* ustaw biały kolor tekstu */
+  text-decoration: none; /* usuń domyślne podkreślenie */
 }
+
+.btn2:hover {
+  background: linear-gradient(to right, #482451, #d6a7dc); /* zachowaj gradient tła */
+}
+
+.btn2:hover a {
+  text-decoration: underline; /* podkreśl link po najechaniu */
+}
+
 
