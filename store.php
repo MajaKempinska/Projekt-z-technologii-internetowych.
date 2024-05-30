@@ -1,17 +1,25 @@
 <?php
+session_start();
 
-// Database connection details
-$host = 'localhost';
-$username = 'root'; // Replace with your database username
-$password = '';     // Replace with your database password
-$database = 'shop';
+include "helpers.php";
 
-// Create a new MySQLi connection
-$mysqli = new mysqli($host, $username, $password, $database);
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
 
-// Check for connection errors
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
+$cart = $_SESSION['cart'];
+
+
+
+$selectedId = $_POST["selected_id"];
+if (!is_null($selectedId)) {
+    $index = array_search($selectedId, $cart);
+    if ($index === false) {
+        array_push($cart, $selectedId);
+    } else {
+        array_splice($cart, $index, 1);
+    }
+    $_SESSION['cart'] = $cart;
 }
 
 ?>
@@ -104,6 +112,7 @@ if ($mysqli->connect_error) {
                     <button class="btn0" type="submit">
                       <span>S</span><span>E</span><span>A</span><span>R</span><span>C</span><span>H</span>
                     </button>
+                </form>
             </div>
         </div>
     </nav>
@@ -125,13 +134,10 @@ if ($mysqli->connect_error) {
                 <?php
 
                 $query = "SELECT id, name, price, description, image_path FROM raccoons";
-                $result = $mysqli->query($query);
+                $result = dbget($query);
 
-                if (!$result) {
-                    die("Query failed: " . $mysqli->error);
-                }
 
-                while ($row = $result->fetch_assoc()) {
+                foreach ($result as $row) {
                     echo
                     '<div class="col-lg-3 text-center">
                         <div class="card border-0 bg-light mb-2">
@@ -145,12 +151,13 @@ if ($mysqli->connect_error) {
                         </p>
                         <p class="centered-price">$'. htmlspecialchars($row['price']) .'</p>
                         <div class="row pt-1"></div>
-                        <button class="btn2"><a href="#">ADD TO CART!</a></button>
+                        <form action="" method="POST">
+                        <button type="submit" name="selected_id" value="'. htmlspecialchars($row['id']) .'" class="btn2">ADD TO CART!</button>
+                        </form>
                         <div class="row pb-1"></div>
                     </div>';
 
                 }
-                $result->free();
 
                 ?>
             </div>
@@ -158,5 +165,3 @@ if ($mysqli->connect_error) {
     </section>
 </body>
 </html>
-
-<?php $mysqli->close(); ?>

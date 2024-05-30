@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "helpers.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,15 +105,33 @@
     </nav>
 
     <div class="form-container">
+
+        <h2>
+            Selected Racoons:
+        </h2>    
+
         <?php
 
-        echo 'tu będzie koszyk<br>';
         
-        $szopy = array("szop 1", "szop 2", "szop 3");
+        $cart = $_SESSION['cart'];
 
-        foreach ($szopy as $szop) {
-            echo $szop . '<br>';
+        $query = "
+            SELECT id, name, price, description, image_path
+            FROM raccoons
+            WHERE id IN (" .
+            implode(",", array_map("intval", $cart))
+            . ")";
+        $result = dbget($query);
+
+        $total = 0;
+
+        foreach ($result as $row) {
+            $price = intval($row["price"]);
+            echo $row["name"] . ' - $'. $price .'<br>';
+            $total += $price;
         }
+
+        echo '<br>TOTAL: $' . $total . ' + shipping<br><br>';
 
         ?>
 
