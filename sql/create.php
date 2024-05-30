@@ -28,6 +28,11 @@ if ($mysqli->multi_query($sql)) {
     echo "Error executing SQL script: " . $mysqli->error;
 }
 
+echo "<br>Redirect in 3 seconds...";
+
 // Close the connection
 $mysqli->close();
+header( "refresh:3;url=/pracze/index.php" );
+
+
 ?>
