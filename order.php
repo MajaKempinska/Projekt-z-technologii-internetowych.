@@ -80,13 +80,13 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav m-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="store.html">Store</a>
+                        <a class="nav-link" href="store.php">Store</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="order.html">Order</a>
+                        <a class="nav-link" href="order.php">Order</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -100,6 +100,19 @@
     </nav>
 
     <div class="form-container">
+        <?php
+
+        echo 'tu będzie koszyk<br>';
+        
+        $szopy = array("szop 1", "szop 2", "szop 3");
+
+        foreach ($szopy as $szop) {
+            echo $szop . '<br>';
+        }
+
+        ?>
+
+
         <form>
             <div class="mb-3">
                 <label for="firstName" class="form-label">First Name:</label>
