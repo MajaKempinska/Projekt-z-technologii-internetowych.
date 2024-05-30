@@ -2,6 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  .navbar.navbar-expand-lg.navbar-light.bg-light {
+    background: linear-gradient(to right, #ffffff, #ffffff, #e6bdfb, #412a58, #21152d) !important;
+
+  }
   
 }
 .navbar-brand {
@@ -12,12 +17,12 @@
   font-weight: 400;
   font-style: normal;
   font-family: "Pacifico", cursive;
-  background: linear-gradient(to right, #482451, #d6a7dc);
+  background: linear-gradient(to right, #491a55, #8d5d93);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .navbar-brand:hover {
-  background: linear-gradient(to right, #d6a7dc, #482451);
+  background: linear-gradient(to right, #8d5d93, #491a55);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -30,35 +35,31 @@
   height: 90px; /* Ustawienie nowej wysokości */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  position: relati
+  position: relative;
 }
 
 .navbar-nav .nav-link {
-  font-size: 1.2rem; /* dostosuj do potrzeb */
+  font-size: 1.5rem; /* Adjust as needed */
   margin-bottom: -10px !important;
+  margin-right: 40px; /* Adjust to create space between links */
+  margin-left: 40px; /* Adjust to create space between links */
 }
+
 .navbar-nav {
   margin-left: auto;
 }
 
 .navbar-nav .nav-item {
-  margin-right: 40px; /* Dostosuj odstęp między elementami nawigacji */
+  margin-right: 40px; /* Adjust spacing between navigation items */
 }
 
-.nav-link {
-  
-  margin-top: -25px;
-  margin-bottom: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
-  font-family: "Mukta", sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: black;
-  text-transform: uppercase;
-}
+
+
 .nav-link:hover {
   background-image: linear-gradient(to right, #d6a7dc, #482451);
+  border-radius: 60px;
+  
+  
 }
 .search {
   margin-top: -17px;
@@ -109,7 +110,7 @@
 }
 
 .main{
-  background: url(img/âPngtreeâpurple\ smoke\ in\ dark\ background_1167620.png)no-repeat;
+  background: url(img/âPngtreeâpurple\ smoke\ in\ dark\ background_1167620.png) no-repeat;
   background-size: cover;
   height: 100vh;
   background-position: 50% 50%;
@@ -124,7 +125,7 @@
 }
 
 .main h1:hover {
-  font-size: 3rem; /* Ustal wielkość tekstu po najechaniu */
+  font-size: 2.8rem; /* Ustal wielkość tekstu po najechaniu */
 }
 
 .btn1{
@@ -143,7 +144,9 @@
 
 h1 {
   font-weight: 700;
-}
+  font-family: 'Righteous', sans-serif !important;
+  }
+
 
 .fixed-size {
   width: 200px;
@@ -165,53 +168,12 @@ h1 {
 }
 
 .homebody{
-  background-color: #482451;
+  background: black;
   background-size: cover;
   background-position: center center;
   height: 100vh;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.navbar-brand {
-  font-size: 2rem;
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-bottom: 15px;
-  font-weight: 400;
-  font-style: normal;
-  font-family: "Pacifico", cursive;
-  background: linear-gradient(to right, #482451, #d6a7dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar-brand:hover {
-  background: linear-gradient(to right, #d6a7dc, #482451);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar-brand img {
-  width: 85px;
-  height: 85px;
-}
-
-.navbar {
-  height: 90px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  position: relative;
-}
-
-.navbar-nav .nav-link {
-  font-size: 1.2rem;
-  margin-bottom: -10px !important;
-}
 
 .navbar-nav {
   margin-left: auto;
@@ -237,21 +199,107 @@ h1 {
   background-image: linear-gradient(to right, #d6a7dc, #482451);
 }
 
-.search {
-  margin-top: -17px;
-  height: 40px;
-  width: 80%;
-  border-radius: 60px;
-  margin-right: -35px;
-  outline: none;
-  border: 2px solid #482451;
-  padding-left: 15px;
-  font-family: "Mukta", sans-serif;
-  font-size: 16px;
+
+.about h1 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fef6ff;
+  transition: font-size 0.3s ease; /* Dodaj przejście dla płynnej animacji */
 }
 
-.btn0 {
-  margin-top: -17px;
-  height: 40px;
-  width: 50%;
+.about h1:hover {
+  font-size: 2.7rem; /* Ustal wielkość tekstu po najechaniu */
+  background: linear-gradient(to right, #c9c9e6, #6c4177); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+h6 {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 20px 0;
+  text-align: center;
+  background: linear-gradient(to right, #482451, #d6a7dc); /* Gradient tła */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h6:hover {
+  -webkit-text-fill-color: transparent; /* Ustawienie koloru tekstu na przezroczysty */
+  background: linear-gradient(to right, #d6a7dc, #482451); /* Gradient tła po najechaniu */
+  -webkit-background-clip: text; /* Zachowanie gradientu tylko dla tekstu */
+}
+
+.btn1 a {
+  color: #482451; /* Ustawienie koloru tekstu */
+  text-decoration: underline; /* Dodanie podkreślenia */
+}
+
+.btn1 a:hover {
+  color: #d6a7dc; /* Zmiana koloru tekstu po najechaniu */
+}
+
+
+
+h5 {
+  font-family: "Righteous", sans-serif; /* Ustawienie nowej czcionki dla h5 */
+  font-size: 1.5rem; /* Ustawienie rozmiaru czcionki */
+  background: linear-gradient(to right, #6c4177, #d6a7dc);
+  font-weight: 400; /* Ustawienie grubości czcionki */
+  margin: 20px 0; /* Dodanie marginesu */
+  text-align: center; /* Wyrównanie tekstu do środka */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h5:hover{
+  
+  background: linear-gradient(to right, #d6a7dc, #482451);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+
+}
+.justified-text {
+  text-align: justify;
+  color: white;
+  font-family: "Mukta", sans-serif;
+}
+.bold-text {
+  font-weight: bold;
+}
+
+.smaller-text {
+  font-size: 0.6em; /* lub inny rozmiar czcionki */
+}
+
+.about {
+  margin-bottom: -50px; /* Ustaw mniejszy margines dolny dla sekcji 'about' */
+}
+
+.centered-text {
+  margin-bottom: 5px;
+  text-align: center;
+  color: white;
+  font-family: "Mukta", sans-serif;
+}
+
+.centered-text strong {
+  font-weight: bold;
+  font-size:20px;
+  font-family: 
+}
+
+.centered-price {
+  text-align: center;
+  background: linear-gradient(to right, #efd4f6, #8d5d93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.custom-margin-right {
+  margin-right: 100px; /* Możesz dostosować wartość marginesu według potrzeb */
+}
+
