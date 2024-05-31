@@ -98,13 +98,13 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav m-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="store.html">Store</a>
+            <a class="nav-link" href="store.php">Store</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="order.html">Order</a>
+            <a class="nav-link" href="order.php">Order</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -211,7 +211,7 @@
     <div class="col-lg-6 text-center m-auto">
       <div class="row pt-1">
         <div class="col-lg-6 text-center m-auto">
-          <a href="store.html" class="btn1 mt-3">Sz(h)op More!</a>
+          <a href="store.php" class="btn1 mt-3">Sz(h)op More!</a>
           <div class="row pb-5">
 
           </div>
