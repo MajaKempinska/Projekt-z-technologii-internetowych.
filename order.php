@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "helpers.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,6 +107,41 @@
     </nav>
 
     <div class="form-container">
+        
+        <h2>
+            Selected Racoons:
+        </h2>    
+
+        <?php
+
+        
+        $cart = $_SESSION['cart'];
+
+        if (is_null($cart) || sizeof($cart) == 0) {
+            echo "None.<br/>";
+        } else {
+            $query = "
+                SELECT id, name, price, description, image_path
+                FROM raccoons
+                WHERE id IN (" .
+                implode(",", array_map("intval", $cart))
+                . ")";
+            $result = dbget($query);
+
+            $total = 0;
+
+            foreach ($result as $row) {
+                $price = intval($row["price"]);
+                echo $row["name"] . ' - $'. $price .'<br>';
+                $total += $price;
+            }
+
+            echo '<br>TOTAL: $' . $total . ' + shipping<br><br>';
+        }
+        
+        ?>
+
+
         <form>
             <div class="mb-3">
                 <label for="firstName" class="form-label">First Name:</label>
