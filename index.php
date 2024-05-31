@@ -106,6 +106,9 @@
           <li class="nav-item">
             <a class="nav-link" href="order.php">Order</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
@@ -119,17 +122,19 @@
 
   <section class="main">
     <div class="container py-1">
-      <div class="row py-5">
-        <div class="col-lg-7 pt-5 text-center">
-          <h1 class="pt-5">Rent-A-Raccoon:<br> <span class="smaller-text">Your Go-To Trash Pandas for Hire!</span></h1>
-          <button class="btn1 mt-3"><a href="#about">Learn more!</a></button>
+        <div class="row py-5">
+            <div class="col-lg-7 pt-5 text-center">
+              <h1 class="pt-5">Rent-A-Raccoon:<br><span class="smaller-text">Your Go-To Trash Pandas for Hire!</span></h1>
+
+                <button class="btn1 mt-3"><a href="#about">Learn more!</a></button>
+            </div>
+            <div class="col-lg-5 pt-5 text-center">
+                <img src="./img/szopymain.png" class="img-fluid img-fluid-large larger-image" alt="Large Raccoon Image" style="width: 500px;">
+            </div>
         </div>
-        <div class="col-lg-5 pt-5 text-center">
-          <img src="./img/szopymain.png" class="img-fluid img-fluid-large" alt="Large Raccoon Image">
-        </div>
-      </div>
     </div>
-  </section>
+</section>
+
 
    <section class="new>">
      <div class="container">
@@ -206,7 +211,7 @@
     <div class="col-lg-6 text-center m-auto">
       <div class="row pt-1">
         <div class="col-lg-6 text-center m-auto">
-          <a href="store.html" class="btn1 mt-3">Sz(h)op More!</a>
+          <a href="store.php" class="btn1 mt-3">Sz(h)op More!</a>
           <div class="row pb-5">
 
           </div>

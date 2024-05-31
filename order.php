@@ -1,8 +1,3 @@
-<?php
-session_start();
-include "helpers.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +60,6 @@ include "helpers.php";
             border-radius: 5px;
             cursor: pointer;
         }
-
     
     </style>
 </head>
@@ -93,6 +87,9 @@ include "helpers.php";
                     <li class="nav-item">
                         <a class="nav-link" href="order.php">Order</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
@@ -105,37 +102,6 @@ include "helpers.php";
     </nav>
 
     <div class="form-container">
-
-        <h2>
-            Selected Racoons:
-        </h2>    
-
-        <?php
-
-        
-        $cart = $_SESSION['cart'];
-
-        $query = "
-            SELECT id, name, price, description, image_path
-            FROM raccoons
-            WHERE id IN (" .
-            implode(",", array_map("intval", $cart))
-            . ")";
-        $result = dbget($query);
-
-        $total = 0;
-
-        foreach ($result as $row) {
-            $price = intval($row["price"]);
-            echo $row["name"] . ' - $'. $price .'<br>';
-            $total += $price;
-        }
-
-        echo '<br>TOTAL: $' . $total . ' + shipping<br><br>';
-
-        ?>
-
-
         <form>
             <div class="mb-3">
                 <label for="firstName" class="form-label">First Name:</label>

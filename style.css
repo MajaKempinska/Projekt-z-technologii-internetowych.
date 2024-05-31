@@ -127,21 +127,33 @@
 .main h1:hover {
   font-size: 2.8rem; /* Ustal wielkość tekstu po najechaniu */
 }
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Ustawienie kierunku flex na kolumnę */
+  align-items: center; /* Wyśrodkowanie elementów w pionie */
+}
 
 .btn1 {
-  height: 60px; /* zwiększ wysokość przycisku */
-  width: 70%; /* zwiększ szerokość przycisku */
-  font-size: 16px; /* zmniejsz rozmiar czcionki */
+  height: 60px;
+  width: 70%;
+  font-size: 16px;
   border: none;
   outline: none;
   background: linear-gradient(to right, #d6a7dc, #482451);
   color: white;
   font-weight: 700;
   border-radius: 60px;
-  margin-top: -30px;
-  margin-bottom: 5px;
-  display: inline-block;
+  display: block; /* Ustawienie na blok, aby można było zastosować margin: auto; */
+  margin: auto; /* Wypośrodkowanie przycisku */
+  text-align: center; /* Wyrównanie tekstu */
 }
+
 
 .btn1:hover {
   background: linear-gradient(to right, #482451, #d6a7dc);
@@ -285,7 +297,6 @@ h5:hover{
 }
 
 .centered-text {
-  margin-bottom: 5px;
   text-align: center;
   color: white;
   font-family: "Mukta", sans-serif;
@@ -336,4 +347,76 @@ h5:hover{
   text-decoration: underline; /* podkreśl link po najechaniu */
 }
 
+.larger-image {
+  width: 100%; /* Zmieniono szerokość obrazka na 100% */
+  max-width: 1000px; /* Ustawiono maksymalną szerokość obrazka */
+  height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+}
 
+.location-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.location-container h7 {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #6c4177, #d6a7dc);
+  font-weight: 400;
+  margin: 20px auto;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.centered-text {
+  text-align: center;
+  color: white;
+  font-family: "Mukta", sans-serif;
+  margin-bottom: 5px;
+}
+
+.centered-text strong {
+  font-weight: bold;
+}
+
+.contact-header {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fef6ff;
+  margin-left: 400px; /* Ustawienie marginesu z lewej strony */
+  transition: font-size 0.3s ease;
+}
+
+.contact-header:hover {
+  font-size: 2.7rem; /* Ustal wielkość tekstu po najechaniu */
+  background: linear-gradient(to right, #c9c9e6, #6c4177); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h8 {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.3em; /* Poprawiona wartość z jednostką */
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 10px;
+  background: linear-gradient(to right, #eec2f9, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h8:hover {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #ffffff, #eec2f);
+  -webkit-background-clip: text;
+}
