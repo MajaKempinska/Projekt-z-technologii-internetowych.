@@ -98,13 +98,16 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav m-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="store.php">Store</a>
+            <a class="nav-link" href="store.html">Store</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="order.php">Order</a>
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -119,17 +122,19 @@
 
   <section class="main">
     <div class="container py-1">
-      <div class="row py-5">
-        <div class="col-lg-7 pt-5 text-center">
-          <h1 class="pt-5">Rent-A-Raccoon:<br> <span class="smaller-text">Your Go-To Trash Pandas for Hire!</span></h1>
-          <button class="btn1 mt-3"><a href="#about">Learn more!</a></button>
+        <div class="row py-5">
+            <div class="col-lg-7 pt-5 text-center">
+              <h1 class="pt-5">Rent-A-Raccoon:<br><span class="smaller-text">Your Go-To Trash Pandas for Hire!</span></h1>
+
+                <button class="btn1 mt-3"><a href="#about">Learn more!</a></button>
+            </div>
+            <div class="col-lg-5 pt-5 text-center">
+                <img src="./img/szopymain.png" class="img-fluid img-fluid-large larger-image" alt="Large Raccoon Image" style="width: 500px;">
+            </div>
         </div>
-        <div class="col-lg-5 pt-5 text-center">
-          <img src="./img/szopymain.png" class="img-fluid img-fluid-large" alt="Large Raccoon Image">
-        </div>
-      </div>
     </div>
-  </section>
+</section>
+
 
    <section class="new>">
      <div class="container">
