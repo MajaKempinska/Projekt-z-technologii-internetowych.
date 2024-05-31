@@ -334,6 +334,13 @@ h5:hover{
   display: inline-block;
 }
 
+.btn2-bg {
+  background: linear-gradient(to right, #936899, #482451) !important;
+  color: white !important;
+  border: none;
+  outline: none;
+}
+
 .btn2 a {
   color: white; /* ustaw biały kolor tekstu */
   text-decoration: none; /* usuń domyślne podkreślenie */

@@ -1,27 +1,6 @@
 <?php
 session_start();
-
 include "helpers.php";
-
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = [];
-}
-
-$cart = $_SESSION['cart'];
-
-
-
-$selectedId = $_POST["selected_id"];
-if (!is_null($selectedId)) {
-    $index = array_search($selectedId, $cart);
-    if ($index === false) {
-        array_push($cart, $selectedId);
-    } else {
-        array_splice($cart, $index, 1);
-    }
-    $_SESSION['cart'] = $cart;
-}
-
 ?>
 
 
@@ -110,11 +89,12 @@ if (!is_null($selectedId)) {
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" action="store.php" method="GET">
+                    <input class="px-2 search" type="search" name="search" placeholder="Search" aria-label="Search">
                     <button class="btn0" type="submit">
                       <span>S</span><span>E</span><span>A</span><span>R</span><span>C</span><span>H</span>
                     </button>
+                </form>
             </div>
         </div>
     </nav>
@@ -123,6 +103,54 @@ if (!is_null($selectedId)) {
 
 
     <!-======== TU SEKCJA WYBORU SZOPÓW Z OBRAZKAMI ========-->
+
+    <script>
+
+        var cart = new Set();
+
+        function toggleCartButton(id) {
+            let element = document.getElementById("button-" + id);
+            if (cart.has(id)) {
+                element.innerText = "ADD TO CART!";
+                cart.delete(id);
+                return false;
+            } else {
+                element.innerText = "REMOVE FROM CART";
+                cart.add(id);
+                return true;
+            }
+        }
+
+        async function toggleCart(id) {
+            let webState = toggleCartButton(id);
+            const formData = new FormData();
+            formData.append("selected_id", id);
+            
+            const response = await fetch("actions/cartItem.php", {
+                method: 'POST', 
+                // mode: 'cors',
+                // cache: 'no-cache',
+                // credentials: 'same-origin', 
+                // headers: {
+                // 'Content-Type': 'application/json',
+                // },
+                // redirect: 'follow',
+                // referrerPolicy: 'no-referrer', 
+                body: formData
+            })
+
+            const apiState = await response.text();
+
+
+            if (apiState != webState.toString()) 
+            {
+                console.log(apiState, webState.toString())
+                toggleCartButton(id);
+            }
+        }
+
+
+    </script>
 
     <section class="product">
         <div class="container">
@@ -136,11 +164,19 @@ if (!is_null($selectedId)) {
 
                 <?php
 
-                $query = "SELECT id, name, price, description, image_path FROM raccoons";
+                $cart = $_SESSION['cart'] ?? [];
+
+                $search = "'%" . ($_GET["search"] ?? "") . "%'";
+                // wiem, SQL injection, można było zrobić $mysqli->prepare
+                $query = "SELECT id, name, price, description, image_path FROM raccoons WHERE name like " . $search . " OR description LIKE " . $search;
                 $result = dbget($query);
 
-
                 foreach ($result as $row) {
+                    $id = strval($row['id']);
+
+                    $inCart = in_array($id, $cart);
+                    $buttonText = $inCart == true ? 'REMOVE FROM CART' : 'ADD TO CART!';
+
                     echo
                     '<div class="col-lg-3 text-center">
                         <div class="card border-0 bg-light mb-2">
@@ -152,17 +188,16 @@ if (!is_null($selectedId)) {
                             <strong>'. htmlspecialchars($row['name']) .':</strong><br>
                             '. htmlspecialchars($row['description']) .'
                         </p>
-                        <p class="centered-price">$'. htmlspecialchars($row['price']) .'</p>
+                        <p class="centered-price pb-3">$'. htmlspecialchars($row['price']) .'</p>
                         <div class="row pt-1"></div>
-                        <form action="" method="POST">
-                        <button type="submit" name="selected_id" value="'. htmlspecialchars($row['id']) .'" class="btn2">ADD TO CART!</button>
-                        </form>
+                        <button id="button-'. $id .'" onmousedown="toggleCart('. $id .')" class="btn btn2-bg">'. $buttonText .'</button>
                         <div class="row pb-1"></div>
                     </div>';
 
                 }
 
                 ?>
+
 
             </div>
         </div>

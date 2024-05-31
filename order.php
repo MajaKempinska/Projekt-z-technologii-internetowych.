@@ -96,8 +96,8 @@ include "helpers.php";
                         <a class="nav-link" href="contact.html">Contact</a>
                       </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" action="store.php" method="GET">
+                    <input class="px-2 search" type="search" name="search" placeholder="Search" aria-label="Search">
                     <button class="btn0" type="submit">
                       <span>S</span><span>E</span><span>A</span><span>R</span><span>C</span><span>H</span>
                     </button>
@@ -152,24 +152,12 @@ include "helpers.php";
                 <input type="text" class="form-control" id="lastName" required>
             </div>
             <div class="mb-3">
-                <label for="street" class="form-label">Street:</label>
-                <input type="text" class="form-control" id="street" required>
+                <label for="address1" class="form-label">Address Line 1:</label>
+                <input type="text" class="form-control" id="address1" required>
             </div>
             <div class="mb-3">
-                <label for="city" class="form-label">City:</label>
-                <input type="text" class="form-control" id="city" required>
-            </div>
-            <div class="mb-3">
-                <label for="zipCode" class="form-label">Zip Code:</label>
-                <input type="text" class="form-control" id="zipCode" required>
-            </div>
-            <div class="mb-3">
-                <label for="stateProvince" class="form-label">State/Province:</label>
-                <input type="text" class="form-control" id="stateProvince" required>
-            </div>
-            <div class="mb-3">
-                <label for="country" class="form-label">Country:</label>
-                <input type="text" class="form-control" id="Country:" required>
+                <label for="address2" class="form-label">Address Line 2:</label>
+                <input type="text" class="form-control" id="address2" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Are you planning to provide your raccoon with cleaning supplies?</label>
