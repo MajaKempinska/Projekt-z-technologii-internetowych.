@@ -1,30 +1,3 @@
-<?php
-session_start();
-
-include "helpers.php";
-
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = [];
-}
-
-$cart = $_SESSION['cart'];
-
-
-
-$selectedId = $_POST["selected_id"];
-if (!is_null($selectedId)) {
-    $index = array_search($selectedId, $cart);
-    if ($index === false) {
-        array_push($cart, $selectedId);
-    } else {
-        array_splice($cart, $index, 1);
-    }
-    $_SESSION['cart'] = $cart;
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,21 +71,23 @@ if (!is_null($selectedId)) {
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav m-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="store.php">Store</a>
+                        <a class="nav-link" href="store.html">Store</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="order.php">Order</a>
+                        <a class="nav-link" href="order.html">Order</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn0" type="submit">
                       <span>S</span><span>E</span><span>A</span><span>R</span><span>C</span><span>H</span>
                     </button>
-                </form>
             </div>
         </div>
     </nav>
@@ -131,35 +106,90 @@ if (!is_null($selectedId)) {
                 </div>
             </div>
             <div class="row">
-                <?php
-
-                $query = "SELECT id, name, price, description, image_path FROM raccoons";
-                $result = dbget($query);
-
-
-                foreach ($result as $row) {
-                    echo
-                    '<div class="col-lg-3 text-center">
-                        <div class="card border-0 bg-light mb-2">
-                            <div class="card-body">
-                                <img src="/pracze/img/'. htmlspecialchars($row['image_path']) .'" class="img-fluid fixed-size" alt="">
-                            </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop18.jpg" class="img-fluid fixed-size" alt="">
                         </div>
-                        <p class="centered-text">
-                            <strong>'. htmlspecialchars($row['name']) .':</strong><br>
-                            '. htmlspecialchars($row['description']) .'
-                        </p>
-                        <p class="centered-price">$'. htmlspecialchars($row['price']) .'</p>
-                        <div class="row pt-1"></div>
-                        <form action="" method="POST">
-                        <button type="submit" name="selected_id" value="'. htmlspecialchars($row['id']) .'" class="btn2">ADD TO CART!</button>
-                        </form>
-                        <div class="row pb-1"></div>
-                    </div>';
+                    </div>
+                    <p class="centered-text"><strong>Gossip Racoon:</strong><br> There is more gossip than working.</p>
+                    <p class="centered-price">$22.99</p>
+                    <div class="row pt-1"></div>
+                    <button class="btn2"><a href="#">ADD TO CART!</a></button>
+                    <div class="row pb-1"></div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop17.jpg" class="img-fluid fixed-size" alt="">
+                        </div>
+                    </div>
+                    <p class="centered-text"><strong>Zorro Racoon:</strong><br> He will distribute your cleaning supplies to the most needy people.</p>
+                    <p class="centered-price">$0.99</p>
+                    <button class="btn2"><a href="#">ADD TO CART</a></button>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop16.jpg" class="img-fluid fixed-size" alt="">
+                        </div>
+                    </div>
+                    <p class="centered-text"><strong>Rockstar Racoon:</strong><br> More playing guitar than washing.</p>
+                    <p class="centered-price">$220.99 (Autograph extra)</p>
+                    <button class="btn2"><a href="#">ADD TO CART</a></button>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop14.jpg" class="img-fluid fixed-size" alt="">
+                        </div>
+                    </div>
+                    <p class="centered-text"><strong>Very Good Racoon:</strong><br> Your laundry will be perfectly washed.</p>
+                    <p class="centered-price">$999.99</p>
+                    <button class="btn2"><a href="#">ADD TO CART!</a></button>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop15.jpg" class="img-fluid fixed-size" alt="">
+                        </div>
+                    </div>
+                    <p class="centered-text"><strong>"I Don't Know What to Do" Racoon:</strong><br> Never knows what to do, you have to help him to wash</p>
 
-                }
+                    <p class="centered-price">$10.00</p>
+                    <button class="btn2"><a href="#">ADD TO CART</a></button>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop20.jpg" class="img-fluid fixed-size" alt="">
+                        </div>
+                    </div>
+                    <p class="centered-text"><strong>Postgraduate Racoon:</strong><br>Too busy to focus on your laundry all the time.</p>
+                    <p class="centered-price">$45.00</p>
+                    <button class="btn2"><a href="#">ADD TO CART</a></button>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop12.jpg" class="img-fluid fixed-size" alt="">
+                        </div>
+                    </div>
+                    <p class="centered-text"><strong>Thief Racoon:</strong><br>The price you will pay for his service will be a rip-off</p>
 
-                ?>
+                    <p class="centered-price">$18.99 (Don't be attached to the money!)</p>
+                    <button class="btn2"><a href="#">ADD TO CART</a></button>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="./img/szop10.jpg" class="img-fluid fixed-size" alt="">
+                        </div>
+                    </div>
+                    <p class="centered-text"><strong>Fat Racoon:</strong><br> Slow, almost not washing, probably eat your fridge.</p>
+                    <p class="centered-price">$2.99</p>
+                    <button class="btn2"><a href="#">ADD TO CART</a></button>
+                </div>
             </div>
         </div>
     </section>
