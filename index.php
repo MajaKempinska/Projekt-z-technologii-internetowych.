@@ -84,6 +84,10 @@
 </head>
 
 <body class="homebody">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <!-- Zawartość nawigacji -->
+</nav>
+
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -107,7 +111,7 @@
             <a class="nav-link" href="order.php">Order</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
         </ul>
         <form class="d-flex" role="search" action="store.php" method="GET">
@@ -223,10 +227,5 @@
 </div>
  </section>
 
-
-
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
  </body>
  </html>

@@ -33,6 +33,9 @@ include "helpers.php";
             /* Ustawienie z-index na 2, aby napis był na wierzchu */
         }
 
+        nav {
+            z-index: 9000;
+        }
         .navbar-brand img {
             position: absolute;
             top: -22px;
@@ -60,6 +63,9 @@ include "helpers.php";
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .homebody {
+            background-image: url('img/maintlo.png');
+        }
     </style>
 </head>
 
@@ -86,7 +92,7 @@ include "helpers.php";
                         <a class="nav-link" href="order.php">Order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search" action="store.php" method="GET">
@@ -178,7 +184,7 @@ include "helpers.php";
                     $buttonText = $inCart == true ? 'REMOVE FROM CART' : 'ADD TO CART!';
 
                     echo
-                    '<div class="col-lg-3 text-center">
+                    '<div class="col-lg-3 text-center mb-5">
                         <div class="card border-0 bg-light mb-2">
                             <div class="card-body">
                                 <img src="/pracze/img/'. htmlspecialchars($row['image_path']) .'" class="img-fluid fixed-size" alt="">
@@ -202,5 +208,8 @@ include "helpers.php";
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
 </body>
 </html>

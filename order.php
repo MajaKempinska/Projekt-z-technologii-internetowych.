@@ -65,7 +65,9 @@ include "helpers.php";
             border-radius: 5px;
             cursor: pointer;
         }
-    
+        .homebody {
+            background-image: url('img/maintlo.png');
+        }
     </style>
 </head>
 
@@ -93,7 +95,7 @@ include "helpers.php";
                         <a class="nav-link" href="order.php">Order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                       </li>
                 </ul>
                 <form class="d-flex" role="search" action="store.php" method="GET">
