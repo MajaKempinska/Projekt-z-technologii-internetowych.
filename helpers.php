@@ -1,7 +1,6 @@
 <?php
 
 function dbget($query) {
-
     $host = 'localhost';
     $username = 'root';
     $password = '';    
@@ -19,10 +18,10 @@ function dbget($query) {
         die("Query failed: " . $mysqli->error);
     }
 
-    return $result->fetch_all(MYSQLI_ASSOC);
-
-    $mysqli->close(); 
-
+    $fetched = $result->fetch_all(MYSQLI_ASSOC);
+    $mysqli->close();
+    $result->free();
+    return $fetched;
 }
 
 ?>

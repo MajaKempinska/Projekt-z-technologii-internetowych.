@@ -142,22 +142,34 @@ include "helpers.php";
         ?>
 
 
-        <form>
+        <form action="actions/placeOrder.php" method="POST">
             <div class="mb-3">
                 <label for="firstName" class="form-label">First Name:</label>
-                <input type="text" class="form-control" id="firstName" required>
+                <input type="text" class="form-control" name="firstName" required maxlength="50">
             </div>
             <div class="mb-3">
                 <label for="lastName" class="form-label">Last Name:</label>
-                <input type="text" class="form-control" id="lastName" required>
+                <input type="text" class="form-control" name="lastName" required maxlength="50">
             </div>
             <div class="mb-3">
                 <label for="address1" class="form-label">Address Line 1:</label>
-                <input type="text" class="form-control" id="address1" required>
+                <input type="text" class="form-control" name="address1" required maxlength="100">
             </div>
             <div class="mb-3">
                 <label for="address2" class="form-label">Address Line 2:</label>
-                <input type="text" class="form-control" id="address2" required>
+                <input type="text" class="form-control" name="address2" required maxlength="100">
+            </div>
+            <div class="mb-3">
+                <label for="cardNumber" class="form-label">Credit Card Number:</label>
+                <input type="text" class="form-control" name="cardNumber" required maxlength="20">
+            </div>
+            <div class="mb-3">
+                <label for="cardExpiration" class="form-label">Expiration Date:</label>
+                <input type="text" class="form-control" name="cardExpiration" required maxlength="7">
+            </div>
+            <div class="mb-3">
+                <label for="CVV" class="form-label">CVV:</label>
+                <input type="text" class="form-control" name="CVV" required maxlength="3">
             </div>
             <div class="mb-3">
                 <label class="form-label">Are you planning to provide your raccoon with cleaning supplies?</label>
