@@ -202,10 +202,9 @@ h1 {
 }
 
 .nav-link {
-  margin-top: -25px;
-  margin-bottom: 30px;
   margin-right: 20px;
   margin-left: 20px;
+  padding: 25px 25px;
   font-family: "Mukta", sans-serif;
   font-weight: 600;
   font-size: 17px;
